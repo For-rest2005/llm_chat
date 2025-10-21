@@ -13,9 +13,9 @@ def chat_mode(content):
 
 def dictionary_mode(word, field=None):
     if field:
-        messages = [{"role": "user", "content": f"给我解释一下这个词在{field}领域的含义，请以可以在终端中直接显示的格式输出，{word}"}]
+        messages = [{"role": "user", "content": f"给我解释一下这个词在{field}领域的含义，请以中文回答，以plaintext的格式输出，{word}"}]
     else:
-        messages = [{"role": "user", "content": f"告诉我这个词的字典释义，请以中文回答，简短一些，{word}"}]
+        messages = [{"role": "user", "content": f"告诉我这个词的字典释义，请以中文回答，以plaintext的格式输出，{word}"}]
     return get_ai_response_stream(messages)
 
 def translate_mode(content):
